@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+@import "colors";
+
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+body{
+    margin: 0;
+}
+section{
+    background: $backgroundColor;
+    min-height: 100vh;
+    @include flexbox();
+}
+
+.music-player-body{
+    background: white;
+    min-height: 70vh;
+    width: 25%;
+    background: linear-gradient(to right bottom,rgba($color: #130f40, $alpha: 0.1),rgba($color: #130f40, $alpha: 0.2)) ;
+    border-radius: 2rem;
+    transition: transform 350ms ease;
+    &:hover{
+        transform: translateY(-20px)
+    }
+}
+
+
+
+img{
+    @include flexbox();
+    height: 250px;
+    width: 350px;
+    border: 3px solid rgba(104, 109, 224,0.5);
+    border-radius: 2rem;
+    margin: 12%;
+  
+}
+
+h1{
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 2px;
+    color: aliceblue;
+    @include flexbox();
+    font-size: 1.7em;
+}
+h3{
+    color: aliceblue;
+    @include flexbox();
+    letter-spacing: 2px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+}
+
+.all-buttons{
+    @include flexbox();
+    justify-content: space-evenly;
+}
+
+button{
+    padding: 20px;
+    font-size: 35px;
+    background: white;
+    background:rgba(255, 255, 255,0.2) ;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    transition: transform 350ms ease;
+    &:hover{
+        transform: translateY(-10px);
+        background:rgba(255, 255, 255,0.4) 
+    }
+}
+.range{
+    @include flexbox();
+    margin: 20px;
+    .slider{
+    width: 100%;
+    
+}}
+
+// @mixin balls {
+//     color: #2ecc71;
+//     font-size: 2rem;
+// }
+
+// #ball1,#ball3,#ball5,#ball7{
+//     @include balls();
+//     animation: jump 2s ease-in-out infinite alternate;
+// }
+
+// @keyframes jump {
+//     from{
+//         transform: translateY(-50px);
+//     }
+//     to{
+//         transform: translateY(50px);
+//     }
+// }
+// #ball2,#ball4,#ball6,#ball8{
+//     @include balls();
+//     animation: jumpA 2s ease-in-out infinite alternate;
+// }
+
+// @keyframes jumpA {
+//     from{
+//         transform: translateY(50px);
+//     }
+//     to{
+//         transform: translateY(-50px);
+//     }
+// }
